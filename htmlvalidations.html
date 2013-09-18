@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+function valid()
+{
+alert("abc");
+n=document.getElementById("txt_name").value;
+e=document.getElementById("txt_email").value;
+ph=document.getElementById("txt_ph").value;
+c=document.getElementById("txt_comments").value;
+
+alert(ph);
+if(n=="" || n==null)
+{
+alert("Name field is required");
+return false;
+}
+if(e=="" || e==null)
+{
+alert("email field is required");
+return false;
+}
+if(ph=="" || ph==null)
+{
+alert("phone number field is required");
+return false;
+}
+if(isNaN(ph))
+{
+alert("numeric value please");
+return false;
+}
+
+else
+{alert("Name:"+n+" "+"email:"+e+" "+"phone:"+ph+" "+"comments:"+ c);
+return true;
+}
+}
+</script>
+</head>
+<body>
+<table>
+<form onsubmit="return valid();">
+<tr><td>Name:</td><td><input type="text" id="txt_name"></td><tr>
+<tr><td>Email:</td><td><input type="text" id="txt_email"></td><tr>
+<tr><td>Phone Number:</td><td><input type="text" id="txt_ph"></td><tr>
+<tr><td>Comments:</td><td><textarea id="txt_comments"></textarea></td><tr>
+<tr><td><input type="submit" value="Submit"></td></tr>
+</form>
+</table
+</body>
+</html>
