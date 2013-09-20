@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js">
+</script>
+<script>
+i=0;
+$(document).ready(function(){
+
+  $("#b1").click(function(){
+    $("p").hide();
+  });
+   $("input").focus(function(){
+    $(this).css("background-color","#cccccc");
+  });
+   $("input").blur(function(){
+    $(this).css("background-color","#ffffff");
+  });
+   $("p").mouseover(function(){
+    $("p").css("background-color","yellow");
+  });
+   $("p").mouseout(function(){
+    $("p").css("background-color","lightgray");
+  });
+  $("img").load(function(){
+    alert("Image loaded.");
+  });
+  $(".btn2").click(function(){
+  $("p").show();
+  });
+   $("input").keypress(function(){
+    $("span").text(i+=1);
+  });
+  $("input").select(function(){
+    $("input").after(" Text marked!");
+  });
+  $("#b3").click(function(){
+    $("input").trigger("select");
+  });
+   $("#l").click(function(){
+    $("#p1").toggle();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2 id="a">This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button id="b1">Click me</button></br>
+<button class="btn2">Show</button>
+Name: <input type="text" name="fullname"><br>
+<p>Keypresses: <span>0</span></p>
+
+<img src="i.jpg" width="304" height="236">
+<button id="b3">Trigger the select event for the input field</button>
+<button id="l">Toggle</button></br>
+<p id="p1">showing toggle property</p>
+</body>
+</html>

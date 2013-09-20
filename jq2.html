@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js">
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#b3").click(function(){
+    $("#t1").hide();
+  });
+  $("#b2").click(function(){
+    $("#t1").show();
+  });
+  $("#b1").click(function(){
+ 
+	 var text = "shagun";
+	$( "input" ).val( text );
+  });
+ $("#t1").hover(function(){
+     
+
+	var text = "shagun";
+	$( "input" ).val( text );
+	
+	 $("#t1").css("color","yellow");
+  });
+  
+});
+</script>
+</head>
+
+<body>
+	<input id ="t1" type="text" name="fullname"><br>
+	<button id="b1">Text Change</button></br>
+	<button id="b2">show</button></br>
+	<button id="b3">hide</button></br>
+</body>
+</html>
